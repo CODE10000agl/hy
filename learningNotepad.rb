@@ -178,3 +178,92 @@ while j < 5 do
 end
 
 #if, times, whileに対してキチンどendをつけて閉じましょう！
+
+for ii in 0..6 do
+  p ii
+end
+
+colorarray = ["red","blue", "pink"]
+
+for color in colorarray do
+  puts color
+end
+
+sales4 .each do |name, sales|
+  puts "#{name} bought #{sales} yen"
+end
+
+
+#関数的メソッド
+
+def sayHi(name, idnum)
+  puts "Hi!" + name
+  puts "Your ID is : " + idnum.to_s
+end
+
+sayHi("Tom", 103904)
+
+#クラス　（オブジェクトの設計図）
+#クラス内のめそっど…インスタンス
+
+class UserClass
+
+  def initialze(input_name)
+    @input_name = Jonny
+  end
+
+  def sayHo
+    puts "Ho-ho! You're #{@input_name}, right?"
+  end
+  
+end
+
+
+=begin
+######################################
+# PID List(Hash) generation Function #
+######################################
+
+
+pidList = {:initial_pid_hoge => 0}
+
+TODO: You have to learn how to inherit Hash
+TODO: Make the datatype clear. Frequently the data isn't fit.
+
+
+def IDgenerator(userName = :none)
+  unableToUse = "Sorry... The name you put cannot be used."
+
+#  userNameExsistance = pidList.has_key?(userName)
+   userNameExsistance=false
+  if userNameExsistance = true
+    return unableToUse
+  end
+
+  loop do
+  pidGenerated = rand(999999)
+# pidExsistance = pidList.has_key?(pidGenerated)
+  pidExsistance = false
+    if pidExsistance = false
+      break
+    end
+  end
+return newUserNameAndPidQQQ = {userName => pidGenerated}
+end
+
+p IDgenerator(:Grace)
+
+newUserNameAndPid = IDgenerator(:Grace)
+pidList.merge!(newUserNameAndPid)
+newUserNameAndPid = IDgenerator(:Vasques)
+pidList.merge!(newUserNameAndPid)
+newUserNameAndPid = IDgenerator(:Jorge)
+pidList.merge!(newUserNameAndPid)
+newUserNameAndPid = IDgenerator(:Mark)
+pidList.merge!(newUserNameAndPid)
+newUserNameAndPid = IDgenerator(:Jessy)
+pidList.merge!(newUserNameAndPid)
+
+puts pidList
+
+=end
