@@ -203,21 +203,94 @@ end
 
 sayHi("Tom", 103904)
 
+
+class User
+
+  def initialize(namem)
+    @name = namem
+  end
+
+=begin
+  #Getter
+  def nameReturn
+    @name
+  end
+  #Setter
+  def nameSet(newName)
+    @name = newName
+  end
+=end
+
+  attr_accessor :name
+#  attr_reader :name ...Getter only
+#  attr_writer :name ...Setter only
+
+  def sayHi
+    puts "hello, my name is #{@name}"
+  end
+
+end
+
+class SuperUser < User
+
+  def shout
+    puts "HELLLLLOOOOOOOO! from #{@name}"
+  end
+
+end
+
+tom = User.new("Tom")
+bob = SuperUser.new("Bob")
+tom.sayHi()
+bob.sayHi()
+bob.shout()
+
+#Time Class
+
+ t = Time.now
+ t2 = Time.new(2015, 8,1,1,1,2)
+ puts t
+ puts t.year
+ puts t.month
+
+ t2 += 100_000_000
+ puts t2
+
+ puts t.strftime("Updated: %y-%m-%d")
+
+
+
+#p bob.nameReturn
+#bob.setName('Tom')
+#bob.shout
+p bob.name
+bob.name = 'Tom'
+bob.shout
+
 #クラス　（オブジェクトの設計図）
 #クラス内のめそっど…インスタンス
 
+=begin
+FIXME: 'new' method doesn't work.
+
 class UserClass
 
-  def initialze(input_name)
-    @input_name = Jonny
+  def initialze (name)
+    @name = name
   end
 
   def sayHo
     puts "Ho-ho! You're #{@input_name}, right?"
   end
-  
+
 end
 
+
+jonn = UserClass.new("jonn")
+
+jonn.sayHo()
+
+=end
 
 =begin
 ######################################
