@@ -178,3 +178,165 @@ while j < 5 do
 end
 
 #if, times, whileに対してキチンどendをつけて閉じましょう！
+
+for ii in 0..6 do
+  p ii
+end
+
+colorarray = ["red","blue", "pink"]
+
+for color in colorarray do
+  puts color
+end
+
+sales4 .each do |name, sales|
+  puts "#{name} bought #{sales} yen"
+end
+
+
+#関数的メソッド
+
+def sayHi(name, idnum)
+  puts "Hi!" + name
+  puts "Your ID is : " + idnum.to_s
+end
+
+sayHi("Tom", 103904)
+
+
+class User
+
+  def initialize(namem)
+    @name = namem
+  end
+
+=begin
+  #Getter
+  def nameReturn
+    @name
+  end
+  #Setter
+  def nameSet(newName)
+    @name = newName
+  end
+=end
+
+  attr_accessor :name
+#  attr_reader :name ...Getter only
+#  attr_writer :name ...Setter only
+
+  def sayHi
+    puts "hello, my name is #{@name}"
+  end
+
+end
+
+class SuperUser < User
+
+  def shout
+    puts "HELLLLLOOOOOOOO! from #{@name}"
+  end
+
+end
+
+tom = User.new("Tom")
+bob = SuperUser.new("Bob")
+tom.sayHi()
+bob.sayHi()
+bob.shout()
+
+#Time Class
+
+ t = Time.now
+ t2 = Time.new(2015, 8,1,1,1,2)
+ puts t
+ puts t.year
+ puts t.month
+
+ t2 += 100_000_000
+ puts t2
+
+ puts t.strftime("Updated: %y-%m-%d")
+
+
+
+#p bob.nameReturn
+#bob.setName('Tom')
+#bob.shout
+p bob.name
+bob.name = 'Tom'
+bob.shout
+
+#クラス　（オブジェクトの設計図）
+#クラス内のめそっど…インスタンス
+
+=begin
+FIXME: 'new' method doesn't work.
+
+class UserClass
+
+  def initialze (name)
+    @name = name
+  end
+
+  def sayHo
+    puts "Ho-ho! You're #{@input_name}, right?"
+  end
+
+end
+
+
+jonn = UserClass.new("jonn")
+
+jonn.sayHo()
+
+=end
+
+=begin
+######################################
+# PID List(Hash) generation Function #
+######################################
+
+
+pidList = {:initial_pid_hoge => 0}
+
+TODO: You have to learn how to inherit Hash
+TODO: Make the datatype clear. Frequently the data isn't fit.
+
+
+def IDgenerator(userName = :none)
+  unableToUse = "Sorry... The name you put cannot be used."
+
+#  userNameExsistance = pidList.has_key?(userName)
+   userNameExsistance=false
+  if userNameExsistance = true
+    return unableToUse
+  end
+
+  loop do
+  pidGenerated = rand(999999)
+# pidExsistance = pidList.has_key?(pidGenerated)
+  pidExsistance = false
+    if pidExsistance = false
+      break
+    end
+  end
+return newUserNameAndPidQQQ = {userName => pidGenerated}
+end
+
+p IDgenerator(:Grace)
+
+newUserNameAndPid = IDgenerator(:Grace)
+pidList.merge!(newUserNameAndPid)
+newUserNameAndPid = IDgenerator(:Vasques)
+pidList.merge!(newUserNameAndPid)
+newUserNameAndPid = IDgenerator(:Jorge)
+pidList.merge!(newUserNameAndPid)
+newUserNameAndPid = IDgenerator(:Mark)
+pidList.merge!(newUserNameAndPid)
+newUserNameAndPid = IDgenerator(:Jessy)
+pidList.merge!(newUserNameAndPid)
+
+puts pidList
+
+=end
