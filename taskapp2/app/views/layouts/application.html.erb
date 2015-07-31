@@ -1,14 +1,21 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>TrialApp</title>
+  <title>Taskapp</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
+<div align="center">
+<%= image_tag ("logo.jpg"), :size => "256x192", :alt => "Logo" %>
+</div>
 
 <%= yield %>
+
+<%= link_to "Home", "/" %>
+
+<%= link_to "Home(projects)", projects_path %>
 
 </body>
 </html>

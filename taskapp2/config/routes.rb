@@ -1,4 +1,15 @@
 Rails.application.routes.draw do
+
+ 	resources :projects do
+ 	  resources :tasks, only: [:create, :destroy]
+ 	end
+
+  post '/projects/:project_id/tasks/:id/toggle' => 'tasks#toggle'
+ # .../projects/    3      / tasks / 5/ toggle/
+ #tasks#toggle .... toggle Method in task Class.
+
+	root 'projects#index'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
