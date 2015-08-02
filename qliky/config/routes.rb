@@ -4,6 +4,10 @@ Rails.application.routes.draw do
   root 'entrances#index'
   get 'entrances/show'
 
+  resources :users do
+    resources :owned_datasets
+  end
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

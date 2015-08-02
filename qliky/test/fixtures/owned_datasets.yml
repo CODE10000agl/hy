@@ -3,23 +3,21 @@
 one:
   data_id: 1
   title: MyString
-  id: 1
   filetype: MyString
   path: MyString
   private: false
   access_key: MyString
-  created_at: 2015-08-02 03:20:46
-  updated_at: 2015-08-02 03:20:46
+  created_at: 2015-08-02 07:58:16
+  updated_at: 2015-08-02 07:58:16
   user_id: 
 
 two:
   data_id: 1
   title: MyString
-  id: 1
   filetype: MyString
   path: MyString
   private: false
   access_key: MyString
-  created_at: 2015-08-02 03:20:46
-  updated_at: 2015-08-02 03:20:46
+  created_at: 2015-08-02 07:58:16
+  updated_at: 2015-08-02 07:58:16
   user_id: 
