@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Qliky</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+<header>
+  <nav>
+    <% if user_signed_in? %>
+        <strong id="name">
+          Hello, <%= link_to current_user.email, entrances_show_path, class:'linkTo_name' %> !
+        </strong>
+           ||<%= link_to 'Edit your profile',    edit_user_registration_path,  class: 'linkTo_nav' %> |
+          <%= link_to 'Log out',              destroy_user_session_path,    class: 'linkTo_nav',  method: :delete %>||
+     <% else %>
+          <%= link_to 'Sign up',  new_user_registration_path,   class: 'linkTo_nav' %>
+          <%= link_to 'Log in',   new_user_session_path,        class: 'linkTo_nav' %>
+     <% end %>
+  </nav>
+</header>
+
+<div class="contents">
+    <p class="notice">
+    <%= notice %>
+    </p>
+
+    <p class="alert">
+    <%= alert %>
+    </p>
+
+    <%= yield %>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,132 @@
+<title>Entrances#index</title>
+
+<h1>ようこそ　<%= current_user.email %>さん！</h1>
+
+
+<p>こちらはユーザページです。</p>
+<p>属性を指定すれば、色々と表示できそうですね。</p>
+
+<p>
+  <%= link_to "ここからリンクにしたいですね", entrances_show_path %></p>
+
+      <table align="center" width="750px">
+        <thead class="scrollHead">
+        <tr>
+          <th class="key">key</th>
+          <th class="value">value</th>
+        </tr>
+        </thead>
+        <tbody class="scrollBody">
+
+          <tr>
+            <td class="key">id</td>
+            <td class="value">
+            <%= current_user.id %>
+            </td>
+          </tr>
+          <tr>
+
+          <tr>
+            <td class="key">email</td>
+            <td class="value">
+            <%= current_user.email %>
+            </td>
+          </tr>
+          <tr>
+            <td class="key">encrypted_password</td>
+            <td class="value">
+            <%= current_user.encrypted_password %>
+            </td>
+          </tr>
+          <tr>
+            <td class="key">reset_password_token</td>
+            <td class="value">
+            <%= current_user.reset_password_token %>
+            </td>
+          </tr>
+          <tr>
+            <td class="key">reset_password_sent_at</td>
+            <td class="value">
+            <%= current_user.reset_password_sent_at %>
+            </td>
+          </tr>
+          <tr>
+            <td class="key">remember_created_at</td>
+            <td class="value">
+            <%= current_user.remember_created_at %>
+            </td>
+          </tr>
+          <tr>
+            <td class="key">sign_in_count</td>
+            <td class="value">
+            <%= current_user.sign_in_count %>
+            </td>
+          </tr>
+          <tr>
+            <td class="key">current_sign_in_at</td>
+            <td class="value">
+            <%= current_user.current_sign_in_at %>
+            </td>
+          </tr>
+          <tr>
+            <td class="key">current_sign_in_ip</td>
+            <td class="value">
+            <%= current_user.current_sign_in_ip %>
+            </td>
+          </tr>
+          <tr>
+            <td class="key">last_sign_in_at</td>
+            <td class="value">
+            <%= current_user.last_sign_in_at %>
+            </td>
+          </tr>
+          <tr>
+            <td class="key">last_sign_in_ip</td>
+            <td class="value">
+            <%= current_user.last_sign_in_ip %>
+            </td>
+          </tr>
+          <tr>
+            <td class="key">confirmation_token</td>
+            <td class="value">
+            <%= current_user.confirmation_token %>
+            </td>
+          </tr>
+          <tr>
+            <td class="key">confirmed_at</td>
+            <td class="value">
+            <%= current_user.confirmed_at %>
+            </td>
+          </tr>
+          <tr>
+            <td class="key">confirmation_sent_at</td>
+            <td class="value">
+            <%= current_user.confirmation_sent_at %>
+            </td>
+          </tr>
+          <tr>
+            <td class="key">unconfirmed_email</td>
+            <td class="value">
+            <%= current_user.unconfirmed_email %>
+            </td>
+          </tr>
+          <tr>
+            <td class="key">failed_attempts</td>
+            <td class="value">
+            <%= current_user.unlock_token %>
+            </td>
+          </tr>
+          <tr>
+            <td class="key">unlock_token</td>
+            <td class="value">
+            <%= current_user.unlock_token %>
+            </td>
+          </tr>
+          <tr>
+            <td class="key">locked_at</td>
+            <td class="value">
+            <%= current_user.locked_at %>
+            </td>
+          </tr>
+        </tbody>
+      </table>

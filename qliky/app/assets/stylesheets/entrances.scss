@@ -1,0 +1,44 @@
+// Place all the styles related to the Entrances controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+body{
+  margin-right: auto;
+  margin-left : auto;
+  text-align: center;
+  background-color: #F0F0F0;
+  font-family:inherit;
+}
+
+
+/* スクロール用 */
+thead.scrollHead{
+  display:block;
+  width:  fixed;
+
+}
+
+tbody.scrollBody{
+  display:    block;
+  overflow-y: scroll;
+  height:     250px;
+  width:      fixed;
+}
+
+/* 幅調整 */
+th,td{
+  table-layout:fixed;
+}
+
+.key{
+  width:300px;
+  background-color: #4C9ACE;
+}
+.value{
+  width:450px;
+  background-color: #A3C6E5;
+}
+
+.userDataScope{
+  font-size: 12px;
+}

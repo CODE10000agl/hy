@@ -1,0 +1,15 @@
+<p>Welcome <%= @email %>!</p>
+
+<p>
+  This is the confimation system deployed by H.Yoshiki &# 9764
+</p>
+
+<p>
+You can confirm your account email through the link below:
+</p>
+
+<p><%= link_to 'Confirm my account', confirmation_url(@resource, confirmation_token: @token) %></p>
+
+<p>
+  If you have any questions or concerns, don't hesitate to ask me.
+</p>
