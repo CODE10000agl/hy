@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  displayname: MyString
+  qmail: MyString
+  encrypass: MyString
+  qsubscriber: false
+  qoid: 1
+
+two:
+  displayname: MyString
+  qmail: MyString
+  encrypass: MyString
+  qsubscriber: false
+  qoid: 1
