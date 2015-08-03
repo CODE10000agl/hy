@@ -1,0 +1,38 @@
+<%= form_for(@qview) do |f| %>
+  <% if @qview.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@qview.errors.count, "error") %> prohibited this qview from being saved:</h2>
+
+      <ul>
+      <% @qview.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :quser %><br>
+    <%= f.text_field :quser %>
+  </div>
+  <div class="field">
+    <%= f.label :qdataset %><br>
+    <%= f.text_field :qtadaset %>
+  </div>
+  <div class="field">
+    <%= f.label :qvtitle %><br>
+    <%= f.text_field :qvtitle %>
+  </div>
+  <div class="field">
+    <%= f.label :qvprivacy %><br>
+    <%= f.check_box :qvprivacy %>
+  </div>
+  <div class="field">
+    <%= f.label :qdpermkey %><br>
+    <%= f.check_box :qdpermkey %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

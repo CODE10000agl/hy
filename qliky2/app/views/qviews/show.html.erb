@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Qvtitle:</strong>
+  <%= @qview.qvtitle %>
+</p>
+
+<p>
+  <strong>Quser:</strong>
+  <%= @qview.quser %>
+</p>
+
+<p>
+  <strong>Qdataset:</strong>
+  <%= @qview.qdataset %>
+</p>
+
+<p>
+  <strong>Qvprivacy:</strong>
+  <%= @qview.qvprivacy %>
+</p>
+
+<p>
+  <strong>Qdpermkey:</strong>
+  <%= @qview.qdpermkey %>
+</p>
+
+<%= link_to 'Edit', edit_qview_path(@qview) %> |
+<%= link_to 'Back', qviews_path %>

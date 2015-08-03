@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Organization title:</strong>
+  <%= @qorganization.qotitle %>
+</p>
+
+<p>
+  <strong>Privacy:</strong>
+  <%= @qorganization.qoprivacy %>
+</p>
+
+<p>
+  <strong>Permission key:</strong>
+  <%= @qorganization.qopermkey %>
+</p>
+
+<p>
+  <strong>Subscriber?:</strong>
+  <%= @qorganization.qosubscriber %>
+</p>
+
+
+<%= link_to 'Edit', edit_qorganization_path(@qorganization) %> |
+<%= link_to 'Back', qorganizations_path %>
