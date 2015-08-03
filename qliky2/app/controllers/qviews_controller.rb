@@ -69,6 +69,8 @@ class QviewsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def qview_params
-      params.require(:qview).permit(:displayname, :qmail, :encrypass, :qsubscriber, :qoid)
+      params.require(:qview)
+#      In terms of security, the code below is preferred.
+#      params.require(:qview).permit(:displayname, :qmail, :encrypass, :qsubscriber, :qoid)
     end
 end

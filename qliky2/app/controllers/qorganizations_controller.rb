@@ -69,6 +69,9 @@ class QorganizationsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def qorganization_params
-      params.require(:qorganization).permit(:displayname, :qmail, :encrypass, :qsubscriber, :qoid)
+
+      params.require(:qorganization)
+#      In terms of security, the code below is preferred.
+#      params.require(:qorganization).permit(:displayname, :qmail, :encrypass, :qsubscriber, :qoid)
     end
 end
