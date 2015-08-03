@@ -1,4 +1,13 @@
 Rails.application.routes.draw do
+
+  resources :qusers do
+    resources :datasets, only: [:create, :show, :destroy]
+  end
+
+  resources :qorganizations
+
+  resources :qviews
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

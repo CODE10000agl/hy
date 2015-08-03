@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Displayname:</strong>
+  <%= @quser.displayname %>
+</p>
+
+<p>
+  <strong>Qmail:</strong>
+  <%= @quser.qmail %>
+</p>
+
+<p>
+  <strong>Encrypass:</strong>
+  <%= @quser.encrypass %>
+</p>
+
+<p>
+  <strong>Qsubscriber:</strong>
+  <%= @quser.qsubscriber %>
+</p>
+
+<p>
+  <strong>Qoid:</strong>
+  <%= @quser.qoid %>
+</p>
+
+<%= link_to 'Edit', edit_quser_path(@quser) %> |
+<%= link_to 'Back', qusers_path %>

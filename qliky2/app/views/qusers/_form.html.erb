@@ -1,0 +1,41 @@
+<%= form_for(@quser) do |f| %>
+  <% if @quser.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@quser.errors.count, "error") %> prohibited this quser from being saved:</h2>
+
+      <ul>
+      <% @quser.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :displayname %><br>
+    <%= f.text_field :displayname %>
+  </div>
+  <div class="field">
+    <%= f.label :qmail %><br>
+    <%= f.text_field :qmail %>
+  </div>
+  <div class="field">
+    <%= f.label :encrypass %><br>
+    <%= f.text_field :encrypass %>
+  </div>
+  <div class="field">
+    <%= f.label :qsubscriber %><br>
+    <%= f.check_box :qsubscriber %>
+  </div>
+  <div class="field">
+    <%= f.label :qprivacy %><br>
+    <%= f.check_box :qprivacy %>
+  </div>
+  <div class="field">
+    <%= f.label :qoid %><br>
+    <%= f.number_field :qoid %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Qusers</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Displayname</th>
+      <th>Qmail</th>
+      <th>Encrypass</th>
+      <th>Qsubscriber</th>
+      <th>Qoid</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @qusers.each do |quser| %>
+      <tr>
+        <td><%= quser.displayname %></td>
+        <td><%= quser.qmail %></td>
+        <td><%= quser.encrypass %></td>
+        <td><%= quser.qsubscriber %></td>
+        <td><%= quser.qoid %></td>
+        <td><%= link_to 'Show', quser %></td>
+        <td><%= link_to 'Edit', edit_quser_path(quser) %></td>
+        <td><%= link_to 'Destroy', quser, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Quser', new_quser_path %>
